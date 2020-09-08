@@ -1,10 +1,10 @@
 class Webpushr::ServerWorkersController < ApplicationController
-  def index
-    # respond_to do |format|
-    #   format.js
-    #   format.html { redirect_to root_path }
-    # end
+  protect_from_forgery except: :index
 
-    redirect_to root_path
+  def index
+    respond_to do |format|
+      format.js
+      format.html { redirect_to root_path }
+    end
   end
 end

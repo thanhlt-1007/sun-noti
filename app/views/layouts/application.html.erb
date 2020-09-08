@@ -11,5 +11,8 @@
 
   <body>
     <%= yield %>
+
+    <!-- This file must be rendered before the end of the body tag -- >
+    <%= render "shared/webpushr/tracking_code" %>
   </body>
 </html>
