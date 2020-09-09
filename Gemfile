@@ -13,10 +13,13 @@ gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "dotenv-rails"
+gem "config"
+gem "faraday"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "sqlite3"
+  gem "pry-rails"
 end
 
 group :development do
