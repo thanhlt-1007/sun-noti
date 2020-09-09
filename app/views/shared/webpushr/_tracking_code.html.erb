@@ -11,8 +11,22 @@
     js.src = "https://cdn.webpushr.com/app.min.js";
     fjs.parentNode.appendChild(js);
   }(window,document, 'script', 'webpushr-jssdk'));
+
   webpushr('setup',{
     'key':'<%= ENV["WEBPUSHR_TRACKING_CODE"] %>'
   });
+
+  function _webpushrScriptReady(){
+    console.log('_webpushrScriptReady');
+
+    webpushr('attributes',{
+      'key1' : 'value',
+      'key2' : 'value'
+    });
+
+    webpushr('fetch_id',function (sid) {
+      console.log('webpushr subscriber id: ' + sid)
+    });
+  }
 </script>
 <!-- end webpushr code -->
