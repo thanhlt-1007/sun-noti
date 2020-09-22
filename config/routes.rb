@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "home#index"
+  root "notifications#new"
 
   get "/webpushr-sw", to: "webpushr/server_workers#index"
 end
